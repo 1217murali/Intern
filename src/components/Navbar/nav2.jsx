@@ -8,7 +8,7 @@ function nav2() {
           (item, index) => (
             <li
               key={index}
-              className="uppercase cursor-pointer text-gray-700 transition-transform duration-300 transform hover:scale-105 text-white"
+              className="uppercase cursor-pointer transition-transform duration-300 transform hover:scale-105 text-white"
             >
               {item}
             </li>

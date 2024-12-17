@@ -15,7 +15,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="py-6 bg-[#e82574] md:bg-transparent">
+    <div className="py-6 bg-pink-600 md:bg-transparent">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div>
@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           <a
             href="https://www.apple.com"
-            className="bg-primary text-white px-4 py-2 rounded-xl hover:bg-secondary transform transition-transform duration-300 hover:-translate-y-2"
+            className="bg-pink-600 text-white px-7 py-3 rounded-xl hover:bg-pink-800"
           >
             BOOK
           </a>
