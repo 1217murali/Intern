@@ -1,17 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import Nav from "../Navbar/nav";
-import Nav2 from "../Navbar/nav2";
+import { FaBars, FaTimes } from "react-icons/fa"; // Hamburger and close icons
+import Nav from "../Navbar/nav"; // Desktop navigation
+import Nav2 from "../Navbar/nav2"; // Mobile navigation
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  
-  const toggle = () => setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false); // State to handle mobile menu toggle
+
+  const toggleMenu = () => setIsOpen(!isOpen); // Toggle function for mobile menu
 
   useEffect(() => {
-    const handleResize = () => window.innerWidth >= 768 && setIsOpen(false);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const handleResize = () => {
+      // Close the mobile menu on resize if the screen width is greater than 768px
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize); // Adding event listener on resize
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up the event listener on unmount
+    };
   }, []);
 
   return (
@@ -19,37 +28,45 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div>
-          <p className="text-lg font-semibold text-white">
-            Kingsukh Guest House
-          </p>
+          <p className="text-lg font-semibold text-white">Kingsukh Guest House</p>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu (Only visible on medium screens and up) */}
         <div className="hidden md:flex justify-between">
           <Nav />
         </div>
 
-        {/* Button Section */}
+        {/* Button Section for Desktop */}
         <div className="hidden md:block">
           <a
-            href="https://www.apple.com"
-            className="bg-pink-600 text-white px-7 py-3 rounded-xl hover:bg-pink-800"
+            href="https://wa.link/at5ion"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-pink-600 text-white px-7 py-3 rounded-xl hover:bg-pink-800 cursor-pointer"
           >
             BOOK
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Toggle Button */}
         <div className="md:hidden">
-          <button onClick={toggle} aria-label="Toggle Menu">
-            {isOpen ? <FaTimes /> : <FaBars />}
+          <button
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+            className="text-white bg-transparent border-none cursor-pointer"
+          >
+            {isOpen ? (
+              <FaTimes className="text-white text-2xl" />
+            ) : (
+              <FaBars className="text-white text-2xl" />
+            )}
           </button>
         </div>
       </div>
-      
-      {/* Mobile Menu */}
+
+      {/* Mobile Menu (Only visible on small screens) */}
       <div
-        className={`md:hidden mt- -m-0 overflow-hidden transition-all duration-1000 ease-in-out ${
+        className={`md:hidden mt-0 overflow-hidden transition-all duration-500 ease-in-out ${
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >

@@ -1,22 +1,19 @@
 import React from "react";
 
-function nav2() {
+const Nav2 = () => {
   return (
-    <div className="md:hidden mt-4">
-      <ul className="flex flex-col items-center gap-2 transition-transform duration-300 ease-in-out">
-        {["Home", "About", "Services", "Rooms", "Gallery", "Contact"].map(
-          (item, index) => (
-            <li
-              key={index}
-              className="uppercase cursor-pointer transition-transform duration-300 transform hover:scale-105 text-white"
-            >
+    <div className="flex flex-col items-center gap-4 p-6 bg-pink-600">
+      <ul className="flex flex-col items-center gap-4">
+        {["Home", "About", "Services", "Rooms", "Gallery", "Contact"].map((item, index) => (
+          <li key={index} className="text-white cursor-pointer hover:text-primary">
+            <a href={`#${item.toLowerCase()}`} className="relative z-10">
               {item}
-            </li>
-          )
-        )}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
-}
+};
 
-export default nav2;
+export default Nav2;
