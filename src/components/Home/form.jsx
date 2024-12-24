@@ -4,12 +4,11 @@ import Call from '../../assets/call.png';
 import Mail from '../../assets/mail.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 function Form() {
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-white shadow-lg rounded-lg p-8 gap-8 mt-16 mb-16">
+    <div className="relative flex flex-col md:flex-row justify-between p-8 gap-8 mt-16 mb-16">
       {/* Contact Info Section */}
-      <div className="bg-pink-600 text-white p-6 rounded-lg flex flex-col gap-6 md:w-1/3">
+      <div className="bg-pink-600 text-white p-6 rounded-3xl flex flex-col gap-6 md:w-1/3 relative -top-4">
         <h3 className="text-2xl font-bold">Contact Info</h3>
         <div className="flex gap-4 items-start">
           <img src={Location} alt="Location" className="w-6 h-6" />
@@ -44,28 +43,28 @@ function Form() {
       </div>
 
       {/* Send a Message Section */}
-      <div className="flex-1">
+      <div className="flex-1 bg-white shadow-lg rounded-lg">
         <h3 className="text-2xl font-bold text-pink-600 mb-6">Send a Message</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input
             type="text"
             placeholder="First Name"
-            className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-pink-500"
+            className="border border-gray-300 p-3 rounded-md  focus:ring-pink-500"
           />
           <input
             type="text"
             placeholder="Last Name"
-            className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-pink-500"
+            className="border border-gray-300 p-3 rounded-md focus:ring-pink-500"
           />
           <input
             type="email"
             placeholder="Email Address"
-            className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-pink-500"
+            className="border border-gray-300 p-3 rounded-md focus:ring-pink-500"
           />
           <input
             type="text"
             placeholder="Mobile Number"
-            className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-pink-500"
+            className="border border-gray-300 p-3 rounded-md focus:ring-pink-500"
           />
         </div>
         <textarea

@@ -4,6 +4,9 @@ import About from './components/Home/About';
 import Living from './components/Home/living';
 import Review from './components/Home/review';
 import Form from './components/Home/form';
+import Map from './components/Home/map';
+import Footer from './components/Home/footer';
+
 
 const App = () => {
   return (
@@ -48,7 +51,13 @@ const App = () => {
         <Review />
       </div>
       <div className="relative z-0">
-        <Form/>
+        <Form />
+      </div>
+      <div className="relative z-0">
+        <Map />
+      </div>
+      <div className="relative z-0">
+        <Footer />
       </div>
     </div>
   );
