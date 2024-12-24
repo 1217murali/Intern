@@ -1,30 +1,33 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import About from './components/Home/About';
+import Living from './components/Home/living';
+import Review from './components/Home/review';
+import Form from './components/Home/form';
 
 const App = () => {
   return (
     <div className="overflow-x-hidden">
-      <div className="relative bg-[url('./assets/Home.webp')] bg-cover bg-center min-h-[120vh] w-full overflow-hidden">
-  {/* Navbar */}
-  <div className="absolute top-0 left-0 w-full z-50">
-    <Navbar />
-  </div>
-
-  {/* Hero Section */}
-  <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-    <p className="text-2xl opacity-60 animate-fadeInDown">
-      Simple - Unique - Friendly
-    </p>
-    <br />
-    <p className="text-6xl font-semibold animate-fadeUpTop">
-      Make Yourself At Home
-    </p>
-    <p className="text-6xl font-bold animate-fadeUpTop">
-      In Our <span className="text-pink-600">Guest House</span>.
-    </p>
-  </div>
-</div>
+        <div className="relative bg-[url('./assets/Home.webp')] bg-cover bg-center min-h-[120vh] w-full overflow-hidden">
+          {/* Navbar */}
+          <div className="sticky top-0">
+            <Navbar />
+          </div>
+          
+          {/* Hero Section */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+            <p className="text-2xl opacity-60 animate-fadeInDown">
+              Simple - Unique - Friendly
+            </p>
+            <br />
+            <p className="text-6xl font-semibold animate-fadeUpTop">
+              Make Yourself At Home
+            </p>
+            <p className="text-6xl font-bold animate-fadeUpTop">
+              In Our <span className="text-pink-600">Guest House</span>.
+            </p>
+          </div>
+      </div>
 
 
       {/* BOOK NOW Button */}
@@ -37,6 +40,15 @@ const App = () => {
       {/* About Section */}
       <div className="relative z-0">
         <About />
+      </div>
+      <div className="relative z-0">
+        <Living />
+      </div>
+      <div className="relative z-0">
+        <Review />
+      </div>
+      <div className="relative z-0">
+        <Form/>
       </div>
     </div>
   );
