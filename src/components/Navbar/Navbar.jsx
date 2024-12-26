@@ -26,17 +26,15 @@ const Navbar = () => {
   return (
     <div className="py-6 bg-pink-600 md:bg-transparent">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo Section */}
         <div>
           <p className="text-lg font-semibold text-white">Kingsukh Guest House</p>
         </div>
 
-        {/* Desktop Menu (Only visible on medium screens and up) */}
+
         <div className="hidden md:flex justify-between">
           <Nav />
         </div>
 
-        {/* Button Section for Desktop */}
         <div className="hidden md:block">
           <a
             href="https://wa.link/at5ion"
@@ -48,7 +46,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle Button */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
@@ -64,7 +61,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu (Only visible on small screens) */}
       <div
         className={`md:hidden mt-0 overflow-hidden transition-all duration-500 ease-in-out ${
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"

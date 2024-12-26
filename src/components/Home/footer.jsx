@@ -78,9 +78,10 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-black w-full text-gray-400 text-center mt-10 md:mt-20 text-sm md:text-base">
+      <div className="bg-black w-full text-gray-400 text-center mt-10 sm:mt-12 md:mt-16 xl:mt-24 text-xs sm:text-sm md:text-base lg:mt-10 2xl:mt-24">
         <p>Copyright © 2024 Kingsukh Guest House. All rights reserved.</p>
       </div>
+
     </div>
   );
 }

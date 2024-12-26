@@ -1,17 +1,50 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AboutImage from "../../assets/About.jpg";
 
 function About() {
+  const FadeInSection = ({ children }) => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        },
+        { threshold: 0.5 } // Trigger when 50% of the item is visible
+      );
+
+      const element = document.getElementById("fade-in-element");
+      if (element) observer.observe(element);
+
+      return () => {
+        if (element) observer.unobserve(element);
+      };
+    }, []);
+
+    return (
+      <div
+        id="fade-in-element"
+        className={`w-4/5 md:w-1/2 flex justify-center mb-8 relative transition-all duration-1000 ${
+          isVisible ? "animate-fadeLeft" : "opacity-0"
+        }`}
+      >
+        {children}
+      </div>
+    );
+  };
+
   return (
     <div className="flex flex-col relative md:flex-row justify-between items-center px-8 py-16 mt-32 gap-y-8 md:gap-x-12 max-w-screen-lg mx-auto">
       {/* Image Section */}
-      <div className="w-4/5 md:w-1/2 flex justify-center mb-8 relative animate-fadeleft">
+      <FadeInSection>
         <img
           src={AboutImage}
           alt="About Kingsukh Guest House"
-          className="w-[110%] h-auto rounded-lg shadow-lg transform md:-translate-x-10 transition-transform duration-500 ease-in-out"
+          className="w-[110%] h-auto rounded-lg shadow-lg"
         />
-      </div>
+      </FadeInSection>
 
       {/* Text Section */}
       <div className="md:w-1/2 md:pl-6">

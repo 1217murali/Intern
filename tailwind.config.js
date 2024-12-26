@@ -11,19 +11,19 @@
             from: { opacity: '0', transform: 'translateY(-50px)' },
             to: { opacity: '1', transform: 'translateY(0)' },
           },
-          fadeUpTop:{
+          fadeUpTop: {
             from: { opacity: '0', transform: 'translateY(50px)' },
             to: { opacity: '1', transform: 'translateY(0)' },
           },
-          fadeleft:{
+          fadeLeft: {
             from: { opacity: '0', transform: 'translateX(-50px)' },
             to: { opacity: '1', transform: 'translateX(0)' },
-          }
+          },
         },
         animation: {
           fadeInDown: 'fadeInDown 1s ease-out',
           fadeUpTop: 'fadeUpTop 1s ease-out',
-          fadeleft: 'fadeleft 1s ease-out'
+          fadeLeft: 'fadeLeft 1s ease-out',
         },
 
         colors:{
