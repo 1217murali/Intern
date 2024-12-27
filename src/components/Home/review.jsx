@@ -3,7 +3,7 @@ import Palash from '../../assets/palash.webp';
 
 export default function Review() {
   return (
-    <div className="relative">
+    <div className="relative mb-36">
       {/* Background Image */}
       <div
         className="w-full h-[84vh] bg-cover bg-center"

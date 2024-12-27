@@ -12,31 +12,14 @@ import Image from './components/Home/image';
 const App = () => {
   return (
     <div className="overflow-x-hidden">
-      <div>
-        <Home />
-      </div>
-      {/* About Section */}
-      <div>
-        <About />
-      </div>
-      <div>
-        <Living />
-      </div>
-      <div>
-        <Review />
-      </div>
-      {/* <div>
-        <Image />
-      </div> */}
-      <div>
-        <Form />
-      </div>
-      <div>
-        <Map />
-      </div>
-      <div>
-        <Footer />
-      </div>
+      <Home />
+      <About />
+      <Living />
+      <Review />
+      <Image />
+      <Form />
+      <Map />
+      <Footer />
     </div>
   );
 };

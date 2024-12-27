@@ -1,10 +1,11 @@
 import React from 'react';
+import { useState, useEffect } from "react";
 import Large from "../../assets/large.jpg";
 import Small from "../../assets/small.jpg";
 
 function living() {
   return (
-    <div className='mb-32 mt-20'>
+    <div className='mb-32 mt-10'>
       <div className='pl-8 md:pl-16 w-auto'>
         <p className='mb-4 font-serif text-lg'>OUR LIVING ROOM_____</p>
         <p className='mb-4 font-bold text-4xl'>The Most Memorable Rest</p>

@@ -46,7 +46,7 @@ function Home() {
         </div>
 
         {/* Book Now Session  */}
-        <div className="absolute  bottom-[-40px] left-1/2 transform -translate-x-1/2 flex justify-center items-center bg-white w-4/5 rounded-lg shadow-lg py-4 ">
+        <div className="absolute  bottom-[-50px] left-1/2 transform -translate-x-1/2 flex justify-center items-center bg-white w-11/12 rounded-lg shadow-lg py-6">
           <a
           href="https://www.apple.com"
           className="bg-pink-600 font-semibold text-white px-6 py-3 rounded-xl hover:bg-pink-800"

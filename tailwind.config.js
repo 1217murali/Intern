@@ -12,8 +12,14 @@
             to: { opacity: '1', transform: 'translateY(0)' },
           },
           fadeUpTop: {
-            from: { opacity: '0', transform: 'translateY(50px)' },
-            to: { opacity: '1', transform: 'translateY(0)' },
+            from: {
+              opacity: '0',
+              transform: 'translateY(20px)', // Start from below
+            },
+            to: {
+              opacity: '1',
+              transform: 'translateY(0)', // End at the original position
+            },
           },
           fadeLeft: {
             from: { opacity: '0', transform: 'translateX(-50px)' },
@@ -49,4 +55,3 @@
     },
     plugins: [],
   }
-
