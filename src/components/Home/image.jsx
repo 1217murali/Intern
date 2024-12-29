@@ -9,11 +9,25 @@ import Seven from '../../assets/recep.jpg';
 import Eight from '../../assets/flower.jpg';
 import Nine from '../../assets/room1.jpg';
 import Tenth from '../../assets/mithonDam.webp';
+import { useInView } from 'react-intersection-observer';
 
 const Image = () => {
+  const [ref,InView]=useInView({triggerOnce: true, threshold:0.2});
   return (
     <div className='mb-[-70px]'>
-      <p className='text-center mb-8 font-serif text-xl'>GALLERY ____</p>
+      <p
+        ref={ref}
+        className={`text-center mb-8 font-serif text-xl ${
+          InView ? 'animate-fadeRight opacity-0' : 'opacity-0'
+        }`}
+        style={{
+          animationDuration: '1s',
+          animationDelay: '0.5s',
+          animationFillMode: 'forwards',
+        }}
+      >
+        GALLERY ____
+      </p>
       <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 grid-rows-4">
         <img src={One} className="col-span-1 row-span-2 h-96 w-full object-cover" />
         <img src={Two} className="h-48 w-full object-cover col-span-2 sm:order-4 md:order-2 lg:order-2" />
