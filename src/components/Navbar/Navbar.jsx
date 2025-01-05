@@ -27,7 +27,7 @@ const Navbar = () => {
     <div className="py-6 bg-pink-600 md:bg-transparent">
       <div className="container mx-auto flex justify-between items-center">
         <div>
-          <p className="text-lg font-semibold text-white">Kingsukh Guest House</p>
+          <p className="text-lg text-white">Kingsukh <br></br>Guest House</p>
         </div>
 
 
@@ -66,7 +66,9 @@ const Navbar = () => {
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <Nav2 />
+        <div className="">
+          <Nav2 />
+        </div>
       </div>
     </div>
   );

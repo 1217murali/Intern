@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import Large from "../../assets/large.jpg";
 import Small from "../../assets/small.jpg";
 
-function Living() {
+function Rooms() {
   const [ref1, inView1] = useInView({
     threshold: 0.2, // Trigger when 20% of the div is visible
     triggerOnce: true, // Animate only once
@@ -80,4 +80,4 @@ function Living() {
   );
 }
 
-export default Living;
+export default Rooms;

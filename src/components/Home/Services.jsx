@@ -2,7 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer'; // Import the useInView hook
 import Palash from '../../assets/palash.webp';
 
-export default function Review() {
+export default function Services() {
   // Create in-view hooks for each list item (li)
   const [service1Ref, service1InView] = useInView({ triggerOnce: true, threshold: 0.2 });
   const [service2Ref, service2InView] = useInView({ triggerOnce: true, threshold: 0.2 });

@@ -11,7 +11,7 @@ import Nine from '../../assets/room1.jpg';
 import Tenth from '../../assets/mithonDam.webp';
 import { useInView } from 'react-intersection-observer';
 
-const Image = () => {
+const Gallery = () => {
   const [ref,InView]=useInView({triggerOnce: true, threshold:0.2});
   return (
     <div className='mb-[-70px]'>
@@ -44,4 +44,4 @@ const Image = () => {
   );
 };
 
-export default Image;
+export default Gallery;
